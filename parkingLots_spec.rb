@@ -30,8 +30,9 @@ describe ParkingLot do
   it 'should return the correct car when there are multi cars in parking lot.' do
     ticket1 = @parking_lot.park("car1")
     ticket2 = @parking_lot.park("car2")
-    @parking_lot.pick(ticket1).should == "car1"
+
     @parking_lot.pick(ticket2).should == "car2"
+    @parking_lot.pick(ticket1).should == "car1"
   end
 
   it 'should not be able to pick car when car is not parked' do
