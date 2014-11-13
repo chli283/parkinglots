@@ -4,7 +4,6 @@ require './parking_lot.rb'
 describe ParkingLot do
 
   before(:each) do
-    @parking_lot = ParkingLot.new(100)
   end
 
   it 'should be able to park a car' do

@@ -49,8 +49,6 @@ describe 'Smart parking fellow' do
     @SmartparkingFellow =SmartParkingFellow.new([@parkingLot1,@parkingLot2])
     ticket1 = @SmartparkingFellow.park("car1")
     ticket2 = @SmartparkingFellow.park("car2")
-    p "ticket1= #{ticket1}"
-    p "ticket2= #{ticket2}"
     @SmartparkingFellow.pick(ticket2).should == "car2"
     @SmartparkingFellow.pick(ticket1).should == "car1"
   end

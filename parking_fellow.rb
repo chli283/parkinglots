@@ -6,16 +6,16 @@ class ParkingFellow
 
   def park(car)
     @parkingLots.each { |parkingLot|
-      ticket = parkingLot.park(car)
-      return ticket if ticket
+    ticket = parkingLot.park(car)
+    return ticket  if  ticket
     }
     nil
   end
 
   def pick(ticket)
     @parkingLots.each { |parkingLot|
-      car = parkingLot.pick(ticket)
-      return car if car
+    car = parkingLot.pick(ticket)
+    return car if car
     }
     nil
   end

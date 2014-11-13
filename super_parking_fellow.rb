@@ -1,9 +1,5 @@
 class SuperParkingFellow < ParkingFellow
 
-  def initialize(parkingLots)
-    @parkingLots = parkingLots
-  end
-
   def park(car)
     @parkingLots[higher_vacancy_rate].park(car)
   end

@@ -26,7 +26,7 @@ class ParkingLot
   end
 
   def vacancy_rate
-   vacant_place.to_f/@capacity.to_f
+   vacant_place.to_f/@capacity
   end
 
 

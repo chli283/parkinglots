@@ -2,13 +2,11 @@ require 'rspec'
 require './parking_lot.rb'
 require './parking_fellow.rb'
 
-
 describe ParkingFellow do
 
   it 'Parking Fellow should be able to park car' do
     @parkingLot1 = ParkingLot.new(100)
     @parkingLot2 = ParkingLot.new(100)
-    @parkingFellow = ParkingFellow.new([@parkingLot1, @parkingLot2])
     @parkingFellow = ParkingFellow.new([@parkingLot1, @parkingLot2])
     @parkingFellow.park("car").should_not == nil
   end

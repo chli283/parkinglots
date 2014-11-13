@@ -5,12 +5,6 @@ require './super_parking_fellow.rb'
 
 describe 'SuperParkingFellow' do
 
-  before(:each) do
-    @parkingLot1 = ParkingLot.new(50)
-    @parkingLot2 = ParkingLot.new(100)
-    @SuperparkingFellow = SuperParkingFellow.new([@parkingLot1, @parkingLot2])
-  end
-
   it 'should be able to pick car when Kayla park the car herself' do
     @parkingLot1 = ParkingLot.new(1)
     @parkingLot2 = ParkingLot.new(1)
@@ -48,6 +42,9 @@ describe 'SuperParkingFellow' do
   end
 
   it 'should not be able to pick car after the car is already picked' do
+      @parkingLot1 = ParkingLot.new(10)
+      @parkingLot2 = ParkingLot.new(10)
+    @SuperparkingFellow = SuperParkingFellow.new([@parkingLot1, @parkingLot2])
     ticket = @SuperparkingFellow.park("car")
     @SuperparkingFellow.pick(ticket)
     @SuperparkingFellow.pick(ticket).should == nil
