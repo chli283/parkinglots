@@ -1,7 +1,7 @@
 class SuperParkingFellow < ParkingFellow
 
   def park(car)
-    @parkingLots[higher_vacancy_rate].park(car)
+    park_by(higher_vacancy_rate,car)
   end
 
 

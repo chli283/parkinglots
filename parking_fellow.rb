@@ -20,4 +20,8 @@ class ParkingFellow
     nil
   end
 
+  def park_by(object,car)
+    @parkingLots[object].park(car)
+  end
+
 end

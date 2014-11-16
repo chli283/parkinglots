@@ -1,7 +1,7 @@
 class SmartParkingFellow < ParkingFellow
 
   def park(car)
-    @parkingLots[more_vacanty].park(car)
+    park_by(more_vacanty,car)
   end
 
   def more_vacanty
