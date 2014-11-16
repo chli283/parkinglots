@@ -7,12 +7,6 @@ require './super_parking_fellow.rb'
 
 describe 'manager' do
 
-  before(:each) do
-    @parkingLot1 = ParkingLot.new(50)
-    @parkingLot2 = ParkingLot.new(100)
-    @Manager = Manager.new([@parkingLot1, @parkingLot2])
-  end
-
   it 'should be able to park car' do
     @parkingLot1 = ParkingLot.new(50)
     @parkingLot2 = ParkingLot.new(100)
