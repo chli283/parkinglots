@@ -20,7 +20,6 @@ class ParkingLot
     @cars.delete(ticket)
   end
 
-
   def vacant_place
     @capacity - @cars.length
   end
@@ -36,7 +35,6 @@ class ParkingLot
   def p_report
     result=""
     result ="#{result}"+"P #{vacant_place} #{capacity}"
-
   end
 
 

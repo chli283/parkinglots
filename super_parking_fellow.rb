@@ -4,7 +4,6 @@ class SuperParkingFellow < ParkingFellow
     park_by(higher_vacancy_rate,car)
   end
 
-
   def higher_vacancy_rate
     result = 0
     @parkingLots.each { |parkingLot|

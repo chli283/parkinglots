@@ -1,4 +1,5 @@
 class Director
+
   def initialize(manager)
     @Managers = manager
   end
@@ -6,4 +7,5 @@ class Director
   def report
     @Managers[0].report
   end
+
 end

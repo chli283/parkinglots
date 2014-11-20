@@ -20,6 +20,13 @@ class ParkingFellow
     nil
   end
 
+  def p_report
+    result="B #{sum_vacancy} #{sum_capacity}"
+    @parkingLots.each{|parkingLot|
+      result ="#{result}"+"\n  #{parkingLot.p_report}"
+    }
+    result
+  end
 
   def sum_capacity
     result = 0
@@ -52,16 +59,6 @@ class ParkingFellow
     }
     result
   end
-
-
-  def p_report
-    result="B #{sum_vacancy} #{sum_capacity}"
-    @parkingLots.each{|parkingLot|
-      result ="#{result}"+"\n  #{parkingLot.p_report}"
-    }
-    result
-  end
-
 
   def park_by(object,car)
     @parkingLots[object].park(car)
