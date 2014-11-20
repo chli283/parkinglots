@@ -166,5 +166,20 @@ describe 'manager' do
     @parkingLot2.pick(ticket).should =="car3"
   end
 
+  it 'should manager SmartFellow to park car by most vacancy.' do
+    @parkingLot1 = ParkingLot.new(1)
+    #@parkingLot2 = ParkingLot.new(3)
+    @parkingLot3 = ParkingLot.new(1)
+
+    @SmartParkingFellow = SmartParkingFellow.new([@parkingLot1])
+    @Manager = Manager.new([@SmartParkingFellow,@parkingLot3])
+
+    ticket = @Manager.park("car")
+    ticket2 = @Manager.park("car1")
+    @parkingLot1.pick(ticket).should =="car"
+    @parkingLot3.pick(ticket2).should =="car1"
+
+  end
+
 
 end

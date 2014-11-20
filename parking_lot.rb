@@ -29,5 +29,15 @@ class ParkingLot
    vacant_place.to_f/@capacity
   end
 
+  def capacity
+    @capacity
+  end
+
+  def p_report
+    result=""
+    result ="#{result}"+"P #{vacant_place} #{capacity}"
+
+  end
+
 
 end
